@@ -7,7 +7,7 @@ const port = 5000;
 // middleware
 app.use(
   cors({
-    origin: "https://blog-frontend-sage-zeta.vercel.app/",
+    origin: "https://blog-frontend-sage-zeta.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"], // Adjust based on your API methods
     credentials: true, // If you're sending cookies or HTTP auth
   })
