@@ -5,7 +5,13 @@ const blogs = require("./api/blogsData.json");
 const port = 5000;
 
 // middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://blog-frontend-rqao.onrender.com",
+    methods: ["GET", "POST", "PUT", "DELETE"], // Adjust based on your API methods
+    credentials: true, // If you're sending cookies or HTTP auth
+  })
+);
 app.use(express.json());
 
 app.get("/", (req, res) => {
